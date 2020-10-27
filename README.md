@@ -1,6 +1,8 @@
 # Cricket-Score-Display
 A program, displays cricket game scores and keeps them as record.
+
 Program can be a bit mistaken. I'm trying to fix bugs.
+
 Instructions :
 1. First enter the name of two playing teams
 2. Enter the number of overs to be played in each innings
