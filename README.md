@@ -1,4 +1,4 @@
-![system](https://imgur.com/7EkgNUw)
+![system](https://hizliresim.com/TqFZ9q)
 
 # Cricket-Score-Display
 A program, displays cricket game scores and keeps them as record.
