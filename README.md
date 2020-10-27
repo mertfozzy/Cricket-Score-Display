@@ -1,6 +1,5 @@
-![photo](https://hizliresim.com/TqFZ9q)
-
 # Cricket-Score-Display
+![photo](https://hizliresim.com/TqFZ9q)
 A program, displays cricket game scores and keeps them as record.
 Program can be a bit mistaken. I'm trying to fix bugs.
 Instructions :
