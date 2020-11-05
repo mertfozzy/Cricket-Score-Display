@@ -2,6 +2,8 @@
 # Cricket-Score-Display
 A program, displays cricket game scores and keeps them as record.
 
+That program developed on DevC++ IDE.
+
 All the codes are written by me. That's not a quote.
 
 Program can be a bit mistaken. I try to fix bugs daily.
