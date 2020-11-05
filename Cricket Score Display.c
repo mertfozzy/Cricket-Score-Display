@@ -81,23 +81,113 @@ void startFonksiyonu(){
     
     system("cls");
     
-    int wicketPuan = 0;
+    int wicketPuanA=0;
+	int wicketPuanB =0;
+    int runsPuanA=0;
+	int runsPuanB=0;
     int j; 
-	int score = 0;
-	char aticiTakim1[10], vurucuTakim1[10];
+    //Team A :
+	int score1a=0,score2a=0,score3a=0,scoreVurucu_A=0,scoreAtici_A = 0;
+	char aticiTakim1[10], vurucu1Takim1[10], vurucu2Takim1[10],vurucu3Takim1[10];
+	
+	//Team B :
+	int score1b=0,score2b=0,score3b=0,scoreVurucu_B=0,scoreAtici_B = 0;
+	char aticiTakim2[10], vurucu1Takim2[10], vurucu2Takim2[10],vurucu3Takim2[10];
+	
+    //ENTERING SCORES OF TEAM A :
 	printf ("=========================================================\n");
-	printf ("Enter name of bowler for %s \t: \t", takim1);
+	printf ("Enter name of Bowler for %s \t: \t", takim1);
 	scanf ("%s", aticiTakim1);
 	
 	printf ("\nEnter 6 shoot scores of %s : \n",aticiTakim1);
 	for (j = 0; j <= 5; j++) {
           printf("\nScore : \t"); 
-          scanf("%d", & score);
-          wicketPuan += score;
+          scanf("%d", & scoreAtici_A);
+          wicketPuanA += scoreAtici_A;
       }
     
-	printf ("\n Total wicket scores of %s : %d\n ", aticiTakim1,wicketPuan);
+	printf ("\n Total wicket scores of %s : %d\n ", aticiTakim1,wicketPuanA);
+	printf("Press any key to proceed with Batsmans of team %s .",takim1);
+    getch();
+    system("cls");
+	
 	printf ("=========================================================\n");
+	printf ("Enter names of 3 Batsman for %s \t: \t", takim1);
+	printf ("\nBatsman 1 : ");
+	scanf ("%s",vurucu1Takim1);
+	printf ("\nBatsman 2 : ");
+	scanf ("%s",vurucu2Takim1);
+	printf ("\nBatsman 3 : ");
+	scanf ("%s",vurucu3Takim1);
+	
+	printf ("\n\nEnter runs score of %s : \n",vurucu1Takim1);
+    printf("\nScore : \t"); 
+    scanf("%d", & score1a);
+    printf ("\nEnter runs score of %s : \n",vurucu2Takim1);
+    printf("\nScore : \t"); 
+    scanf("%d", & score2a);
+    printf ("\nEnter runs score of %s : \n",vurucu3Takim1);
+    printf("\nScore : \t"); 
+    scanf("%d", & score3a);
+    scoreVurucu_A = score1a + score2a + score3a;
+    runsPuanA += scoreVurucu_A;
+      
+    
+	printf ("\n Total runs of Batsmans ; %s , %s and %s : %d\n ", vurucu1Takim1, vurucu2Takim1, vurucu3Takim1,runsPuanA);
+	printf("Press any key to proceed with team %s .",takim2);
+	printf ("=========================================================\n"); //END OF TEAM A SCORING
+    getch();
+    system("cls");
+	
+	//ENTERING SCORES OF TEAM B:
+	printf ("=========================================================\n");
+	printf ("Enter name of Bowler for %s \t: \t", takim2);
+	scanf ("%s", aticiTakim2);
+	
+	printf ("\nEnter 6 shoot scores of %s : \n",aticiTakim2);
+	for (j = 0; j <= 5; j++) {
+          printf("\nScore : \t"); 
+          scanf("%d", & scoreAtici_B);
+          wicketPuanB += scoreAtici_B;
+      }
+    
+	printf ("\n Total wicket scores of %s : %d\n ", aticiTakim2,wicketPuanB);
+	printf("Press any key to proceed with Batsmans of team %s ...\n",takim2);
+    getch();
+    system("cls");
+	
+	printf ("=========================================================\n");
+	printf ("Enter names of 3 Batsman for %s \t: \t", takim2);
+	printf ("\nBatsman 1 : ");
+	scanf ("%s",vurucu1Takim2);
+	printf ("\nBatsman 2 : ");
+	scanf ("%s",vurucu2Takim2);
+	printf ("\nBatsman 3 : ");
+	scanf ("%s",vurucu3Takim2);
+	
+	printf ("\n\nEnter runs score of %s : \n",vurucu1Takim2);
+    printf("\nScore : \t"); 
+    scanf("%d", & score1b);
+    printf ("\nEnter runs score of %s : \n",vurucu2Takim2);
+    printf("\nScore : \t"); 
+    scanf("%d", & score2b);
+    printf ("\nEnter runs score of %s : \n",vurucu3Takim2);
+    printf("\nScore : \t"); 
+    scanf("%d", & score3b);
+    scoreVurucu_B = score1b + score2b + score3b;
+    runsPuanB += scoreVurucu_B;
+      
+    
+	printf ("\n Total runs of batsmans ; %s , %s and %s : %d\n ", vurucu1Takim2, vurucu2Takim2, vurucu3Takim2,runsPuanB);
+	printf("Match is over.\nPress any key to display whole scoreboard...\n");
+	printf ("=========================================================\n");//END OF TEAM B SCORING
+    getch();
+    system("cls");
+	
+	
+	//TIME TO DISPLAY WHOLE SCORE
+	
+	
 }
 
 void userManual (){
