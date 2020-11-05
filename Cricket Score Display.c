@@ -12,7 +12,7 @@ ID : 1804010005
 #include<stdbool.h>
 #include<time.h>
 
-//==========================================================================================
+//******************************************************* MAIN *****************************************************************
 
 int main() {
 intro_ekrani();
@@ -35,9 +35,8 @@ switch(rakam){
 }
 
 }
-
-
-//==========================================================================================
+//*****************************************************************************************************************************
+//***************************************************** INTRO FUNCTION ********************************************************
 void intro_ekrani(){
   printf("\n----------------------------------\n");
   printf("|  Software Engineering Project  |");
@@ -55,7 +54,8 @@ void intro_ekrani(){
   }
   system("cls");
 }
-//==========================================================================================
+//**************************************************************************************************************************
+//************************************************* START FUNCTION *********************************************************
 
 void startFonksiyonu(){
 	char takim1[10], takim2[10];
@@ -79,7 +79,7 @@ void startFonksiyonu(){
   
     system("cls");
     
-//===================================================== MATCH STARTS ==========================================================
+//================================== MATCH STARTS ============================================
     int wicketPuanA=0;
 	int wicketPuanB =0;
     int runsPuanA=0;
@@ -183,7 +183,7 @@ void startFonksiyonu(){
     getch();
     system("cls");
 
-//======================================================= MATCH IS OVER ========================================================
+//================================= MATCH IS OVER ======================================
 	
 	//TIME TO DISPLAY WHOLE SCORE :
 	
@@ -212,17 +212,39 @@ void startFonksiyonu(){
 	
 	//SAVING ALL SCORES INTO TXT FILES
 	FILE * f, * f2;
-    f = fopen("first.txt", "w");
-    f2 = fopen("second.txt", "w");
+    f = fopen("Takim A.txt", "w");
+    f2 = fopen("Takim B.txt", "w");
     fprintf(f, "Batsmans : %s - %d | %s - %d | %s - %d\n\nBowler  : %s - %d", vurucu1Takim1,score1a, vurucu2Takim1,score2a, vurucu3Takim1,score3a,aticiTakim1,wicketPuanA);
     fprintf(f2,"Batsmans : %s - %d | %s - %d | %s - %d\n\nBowler  : %s - %d", vurucu1Takim2,score1b, vurucu2Takim2,score2b, vurucu3Takim2,score3b,aticiTakim2,wicketPuanB);
     fclose(f);
     fclose(f2);
       
 }
+//*******************************************************************************************************************************
 
+
+//************************************************* USER MANUAL *****************************************************************
 void userManual (){
-	
-}
+  system ("cls");
+  printf("\t\t\t\t**** CRICKET SCORING PROGRAM ****\n");
+  printf("\t\t\t\t******** USER MANUAL ********\n");
 
+  printf("\n1. First enter the name of two playing teams\n");
+  printf("2. Enter the First Team's Bowler's name''\n");
+  printf("3. Please do not enter no. of overs or score in character form\n");
+  printf("4. Enter six scores of Bowler's. That will be wicket score. '\n");
+  printf("5. After that press any key to next step.\n");
+  printf("6. Enter Batsman's names for First Team. Program will ask for just three player.\n");
+  printf("7. Then program will ask you batsman's scores. Enter scores correctly.'\n");
+  printf("8. Be careful with the points. Runs points should be 1, 4 and 6\n");
+  printf("9. When done with First Team,press any key. Do the same process for Second Team.\n");
+  printf("10. After all, program will display the total score in a table.\n\n\n");
+  printf("BONUS : THAT PROGRAM CAN RECORD YOUR SCORES IN TXT FILE.\n\n");
+
+  printf("\n\n\t\tPress any key to go back ...\t ");
+  getch();
+  system ("cls");
+  main ();
+}
+//*****************************************************************************************************************************
 
