@@ -76,16 +76,15 @@ void startFonksiyonu(){
           goto x;
         }
         
-    printf ("\nHow many overs will be played in each inning \t: \t");
-    scanf ("%d", &oversayisi);
-    
+  
     system("cls");
     
+//===================================================== MATCH STARTS ==========================================================
     int wicketPuanA=0;
 	int wicketPuanB =0;
     int runsPuanA=0;
 	int runsPuanB=0;
-    int j; 
+    int j,i; //just for loops
     //Team A :
 	int score1a=0,score2a=0,score3a=0,scoreVurucu_A=0,scoreAtici_A = 0;
 	char aticiTakim1[10], vurucu1Takim1[10], vurucu2Takim1[10],vurucu3Takim1[10];
@@ -100,7 +99,7 @@ void startFonksiyonu(){
 	scanf ("%s", aticiTakim1);
 	
 	printf ("\nEnter 6 shoot scores of %s : \n",aticiTakim1);
-	for (j = 0; j <= 5; j++) {
+	for (i = 0; i <= 5; i++) {
           printf("\nScore : \t"); 
           scanf("%d", & scoreAtici_A);
           wicketPuanA += scoreAtici_A;
@@ -179,15 +178,47 @@ void startFonksiyonu(){
       
     
 	printf ("\n Total runs of batsmans ; %s , %s and %s : %d\n ", vurucu1Takim2, vurucu2Takim2, vurucu3Takim2,runsPuanB);
-	printf("Match is over.\nPress any key to display whole scoreboard...\n");
+	printf("Inning is over.\nPress any key to display match score...\n");
 	printf ("=========================================================\n");//END OF TEAM B SCORING
     getch();
     system("cls");
+
+//======================================================= MATCH IS OVER ========================================================
 	
+	//TIME TO DISPLAY WHOLE SCORE :
 	
-	//TIME TO DISPLAY WHOLE SCORE
+	printf ("----------------------------------------------------------------------\n");
+	printf ("|                           TEAM %s                             |\n",takim1);
+	printf ("|  TOTAL WICKETS : %d \t                TOTAL RUNS : %d          |\n", wicketPuanA,runsPuanA);
+	printf ("|\n\n");
+	printf ("|  Bowler : %s                          Batsmans : %s - %s - %s |\n",aticiTakim1, vurucu1Takim1, vurucu2Takim1,vurucu3Takim1);
+	printf ("----------------------------------------------------------------------\n");
+	printf ("----------------------------------------------------------------------\n");
+	printf ("|                           TEAM %s                             |\n",takim2);
+	printf ("|  TOTAL WICKETS : %d \t                TOTAL RUNS : %d          |\n", wicketPuanB,runsPuanB);
+	printf ("|\n\n");
+	printf ("|  Bowler : %s                          Batsmans : %s - %s - %s |\n",aticiTakim2, vurucu1Takim2, vurucu2Takim2,vurucu3Takim2);
+	printf ("----------------------------------------------------------------------\n");
+	printf ("\n\n\n\n");
 	
+	if (runsPuanA > runsPuanB)
+	{
+		printf ("TEAM %s WON THE CRICKET MATCH !!",takim1);
+	}
+	else
+	{
+		printf ("TEAM %s WON THE CRICKET MATCH !!",takim2);
+	}
 	
+	//SAVING ALL SCORES INTO TXT FILES
+	FILE * f, * f2;
+    f = fopen("first.txt", "w");
+    f2 = fopen("second.txt", "w");
+    fprintf(f, "Batsmans : %s - %d | %s - %d | %s - %d\n\nBowler  : %s - %d", vurucu1Takim1,score1a, vurucu2Takim1,score2a, vurucu3Takim1,score3a,aticiTakim1,wicketPuanA);
+    fprintf(f2,"Batsmans : %s - %d | %s - %d | %s - %d\n\nBowler  : %s - %d", vurucu1Takim2,score1b, vurucu2Takim2,score2b, vurucu3Takim2,score3b,aticiTakim2,wicketPuanB);
+    fclose(f);
+    fclose(f2);
+      
 }
 
 void userManual (){
