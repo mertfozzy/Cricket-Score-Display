@@ -2,7 +2,7 @@
 # Cricket-Score-Display
 A program, displays cricket game scores and keeps them as record.
 
-All the codes are written by me. It is not a quote.
+All the codes are written by me. That's not a quote.
 
 Program can be a bit mistaken. I try to fix bugs daily.
 
