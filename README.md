@@ -1,3 +1,4 @@
+![photo](https://github.com/mertfozzy/Cricket-Score-Display/blob/main/screenshot.jpg?raw=true)
 # Cricket-Score-Display
 A program, displays cricket game scores and keeps them as record.
 
