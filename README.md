@@ -5,12 +5,14 @@ Program can be a bit mistaken. I'm trying to fix bugs.
 
 Instructions :
 1. First enter the name of two playing teams
-2. Enter the number of overs to be played in each innings
+2. Enter the First Team's Bowler's name
 3. Please do not enter no. of overs or score in character form
-4. Enter the name of players according to correct batting order
-5. Enter the player name in same case as declared.
-6. Enter -1 in the runs, if the ball is dead, white or no ball or the batsman is out.
-7. Enter the way batsman has been out, if the batsman has been out through runout, bowler won't get a wicket.
-8. Be careful with the case 'Runout','Stumped','Bowled','Caught'
-9. Avoid entering runs other else then '1,2,3,4,5,6,-1', or else error will be shown.
-10. Enter the name of the new bowler after every over and start of the inning.
+4. Enter six scores of Bowler's. That will be wicket score.
+5. After that press any key to next step.
+6. Enter Batsman's names for First Team. Program will ask for just three player
+7. Then program will ask you batsman's scores. Enter scores correctly.
+8. Be careful with the points. Runs points should be 1, 4 and 6.
+9. When done with First Team,press any key. Do the same process for Second Team.
+10. After all, program will display the total score in a table.
+
+BONUS : THAT PROGRAM CAN RECORD YOUR SCORES IN TXT FILE.
